@@ -5,10 +5,10 @@ var car = {
   width: 2,
   length: 4,
   country: "Germany",
+  one_litr: 5,//один литр на 5км
 
   consumption: function (km) {
-    var one_litr = 5;//один литр на 5км
-    return km / one_litr;
+    return km / this.one_litr;
   },
 
   showInfo: function (){
@@ -22,4 +22,4 @@ var car = {
 }
 
 car.showInfo();
-alert("вам нужно потратить " + car.consumption(100) + " литров");
+alert("вам нужно потратить " + car.consumption(200) + " литров");
